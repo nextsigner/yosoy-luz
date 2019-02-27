@@ -62,26 +62,20 @@ ApplicationWindow{
         delegate: del
         model: lm
         ScrollBar.vertical: ScrollBar {}
-        spacing: app.fs*0.5
         width: app.width
-        height:app.height-xTit.height
+        height:app.height
         anchors.horizontalCenter: parent.horizontalCenter
+        boundsBehavior: ListView.StopAtBounds
+
         ListModel{
             id: lm
-            ListElement{txt:"¿Que es YoSoY?"; q:"Xh"; idd:"i1"}
-            ListElement{txt:"¿Para què sirve?"; q:"BotonLista"; idd:"i2"}
-            ListElement{txt:"¿Còmo funciona?"; q:"X1"; idd:"i3"}
-            ListElement{txt:"Màs informaciòn"; q:"X1"; idd:"i4"}
+            ListElement{q:"Xh"; }
+            ListElement{q:"Xl1";}
+            ListElement{ q:"Xf1"; }
         }
-    }
-
-    Component{
-        id: del
-        Xp{
-            text: txt
-            qml: q
-            num: index
-            idData: idd
+        Component{
+            id: del
+            Xp{qml: q;}
         }
     }
     Shortcut{

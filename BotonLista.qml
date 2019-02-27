@@ -7,7 +7,6 @@ Rectangle {
     property string idData: '?'
     property int num: -1
     width: parent.width
-    //height: num!==1?xTxt.height+contenido.height+app.fs*0.5:xTxt.height+contenido.height+app.fs*5
     height: xTxt.height+contenido.height+app.fs*0.5
     Rectangle{
         id: xTxt
