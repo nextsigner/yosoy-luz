@@ -4,18 +4,18 @@ Rectangle {
     id: r
     property string text: '?'
     property string qml: '?'
+    property string idData: '?'
     property int num: -1
     width: parent.width
+    //height: num!==1?xTxt.height+contenido.height+app.fs*0.5:xTxt.height+contenido.height+app.fs*5
     height: xTxt.height+contenido.height+app.fs*0.5
-    //border.width: 2
-    //border.color: 'black'
-    //radius: app.fs*0.1
     Rectangle{
         id: xTxt
         width: app.fs*10+app.fs*1.4
         height: txt.contentHeight+app.fs
         anchors.horizontalCenter: parent.horizontalCenter
-        //color: 'blue'
+        //anchors.bottom: parent.bottom
+        //y: r.num===1?parent.height-height:0
         border.width: 2
         border.color: 'black'
         color: contenido.children.length===0?'white':'black'
@@ -40,24 +40,22 @@ Rectangle {
             anchors.centerIn: parent
             anchors.horizontalCenterOffset: app.fs*1.4
             color: contenido.children.length===0?'black':'white'
-                                                      }
-    }
-    MouseArea{
-        anchors.fill: r
-        onClicked: {
-            if(contenido.children.length===0){
-            var comp = Qt.createComponent(r.qml+'.qml')
-            var obj = comp.createObject(contenido, {})
-            }else{
-                contenido.children[0].opacity=0.0
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+                if(contenido.children.length===0){
+                    var comp = Qt.createComponent('X1.qml')
+                    var obj = comp.createObject(contenido, {"idData":r.idData})
+                }else{
+                    contenido.children[0].opacity=0.0
+                }
             }
         }
     }
+
     Rectangle{
         id: contenido
-        //color: 'red'
-        //border.width: 2
-        //border.color: 'blue'
         width: app.width-app.fs
         height: children.length>=1?children[0].height+app.fs*0.5:0
         anchors.top: xTxt.bottom
