@@ -10,6 +10,7 @@ ListView{
     width: app.width
     height: r.height
     anchors.horizontalCenter: parent.horizontalCenter
+    boundsBehavior: ListView.StopAtBounds
     Text {
         id: txtPie
         text: '<b>Conoce màs sobre YoSoY</b>'
@@ -17,12 +18,25 @@ ListView{
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.top
         anchors.bottomMargin: app.fs
+        MouseArea{
+            width: parent.width+app.fs*2
+            height: parent.height+app.fs
+            hoverEnabled: true
+            onEntered: elevarLV()
+            onClicked: elevarLV()
+            function elevarLV(){
+                if(r.parent.parent.contentY<app.fs){
+                    r.parent.parent.contentY+=app.fs*16
+                }
+            }
+        }
     }
     ListModel{
         id: lm2
         ListElement{al:0; txt:"¿Para què sirve?"; q:"BotonLista"; idd:"i2"}
         ListElement{al:0; txt:"¿Còmo funciona?"; q:"BotonLista"; idd:"i3"}
         ListElement{al:0; txt:"Màs informaciòn"; q:"BotonLista"; idd:"i4"}
+        ListElement{al:0; txt:"Acerca de..."; q:"BotonLista"; idd:"acerca-de"}
     }
     Component{
         id: del2

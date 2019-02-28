@@ -6,7 +6,7 @@ Rectangle {
     Text {
         id: creditos
         text: 'Aplicaciòn creado por @nextsigner\nCopyLeft - Unikode.org 2019'
-        font.pixelSize: app.fs*0.5
+        font.pixelSize: app.fs*0.8
         horizontalAlignment: Text.AlignHCenter
         anchors.centerIn: parent
     }

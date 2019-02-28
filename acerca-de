@@ -1,0 +1,22 @@
+<h3>Sobre YoSoY</h3>
+
+<p>YoSoY es una aplicaciòn Open Source creada por @nextsigner desde la organizaciòn Unikode.org bajo las licencias LGPL. Esta aplicaciòn fue creada utilizando software libre. El lenguaje, frameworks, SDK y sistemas de control son los siguientes.</p>
+
+<ul>
+    <li>GNU</li>
+    <li>Qt</li>
+    <li>QtQuick</li>
+    <li>Android Studio</li>
+    <li>Git</li>
+    <li>C++</li>
+    <li>QML</li>
+    <li>JavaScript</li>
+</ul>
+
+<h3>Sobre Qt</h3>
+
+<p>Qt Open Source fue creado por la comunidad Qt Project. Puedes utilizar el Framework Qt Comunity bajo las licencias LGPL, LGPL2 y LGPL3, o bien Qt Enterprise bajo licencias comerciales.</p>
+
+<p>
+Para màs informaciòn sobre Qt puedes visitar el sitio web https://www.qt.io/
+</p>
