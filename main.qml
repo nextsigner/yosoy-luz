@@ -3,7 +3,7 @@ import QtQuick.Controls 2.0
 ApplicationWindow{
     id: app
     visible: true
-    property int fs: app.width*0.04
+    property int fs: app.width<app.height?app.width*0.04:app.height*0.025
     width: 560
     height: 700
 
