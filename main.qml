@@ -7,6 +7,7 @@ ApplicationWindow{
     property color c0: '#be2edb'
     width: 560
     height: 700
+    FontLoader{name:'FontAwesome'; source: './resources/fa-brands-400.ttf'}
     Item{
         id: xApp
         width: app.width<app.height?parent.width:parent.height
@@ -89,6 +90,12 @@ ApplicationWindow{
                 Xp{qml: q;}
             }
         }
+    }
+    Item{
+        id: xAppFS
+        width: app.width<app.height?parent.width:parent.height
+        height: app.width<app.height?parent.height:parent.width
+        rotation: app.width<app.height?0:-90
     }
     Shortcut{
         enabled: Qt.platform.os!=='android'
