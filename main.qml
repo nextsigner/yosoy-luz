@@ -7,7 +7,7 @@ ApplicationWindow{
     property color c0: '#be2edb'
     width: 560
     height: 700
-    FontLoader{name:'FontAwesome'; source: pws+'/resources/fa-brands-400.ttf'}
+    //FontLoader{id: appFL2;source: './resources/fontawesome-webfont.ttf'}
     Item{
         id: xApp
         width: app.width<app.height?parent.width:parent.height

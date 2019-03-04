@@ -6,7 +6,7 @@ Rectangle {
     height: parent.height
     Text{
         text: '\uf060'
-        font.family: 'FontAwesome'
+        font.family: "FontAwesome"
         font.pixelSize: app.fs
         anchors.left: r.left
         anchors.leftMargin: app.fs
