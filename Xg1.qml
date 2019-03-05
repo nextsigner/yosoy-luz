@@ -31,21 +31,9 @@ Rectangle {
             font.pixelSize: app.fs*1.2
             anchors.horizontalCenter: parent.horizontalCenter
         }
-        Rectangle{
-            id: xImgMC
-            z:infoMC1.z+1
-            width: app.fs*8
-            height: width
-            color: 'blue'
+        LogoMC{
+            id: logoMC
             anchors.horizontalCenter: parent.horizontalCenter
-            Image{
-                id: logoMC
-                property int exp: app.fs*2
-                width: parent.width
-                height: parent.width
-                source: './img/logo_yosoy_luz.png'
-                anchors.centerIn: parent
-            }
         }
         Rectangle{
             width: infoMC1.contentWidth+app.fs
@@ -350,8 +338,8 @@ Rectangle {
         NumberAnimation {
             target: logoMC
             property: "width"
-            from: xImgMC.width
-            to: xImgMC.width+logoMC.exp
+            from: logoMC.width
+            to: logoMC.width+logoMC.exp
             duration: 600
             easing.type: Easing.InOutQuad
         }
@@ -359,7 +347,7 @@ Rectangle {
             target: logoMC
             property: "width"
             from: logoMC.parent.width+logoMC.exp
-            to: xImgMC.width
+            to: logoMC.width
             duration: 300
             easing.type: Easing.InOutQuad
         }
@@ -367,7 +355,7 @@ Rectangle {
             target: logoMC
             property: "width"
             from: logoMC.parent.width+logoMC.exp
-            to: xImgMC.width
+            to: logoMC.width
             duration: 400
             easing.type: Easing.InOutQuad
         }
@@ -386,7 +374,7 @@ Rectangle {
             target: logoMC
             property: "width"
             from: logoMC.parent.width+logoMC.exp
-            to: xImgMC.width
+            to: logoMC.width
             duration: 600
             easing.type: Easing.InOutQuad
         }

@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
+
 ApplicationWindow{
     id: app
     visible: true
@@ -8,6 +9,7 @@ ApplicationWindow{
     width: 560
     height: 700
     FontLoader {name: "FontAwesome";source: "qrc:/fontawesome-webfont.ttf";}
+    onClosing:Qt.quit()
     Item{
         id: xApp
         width: app.width<app.height?parent.width:parent.height
@@ -97,6 +99,7 @@ ApplicationWindow{
         height: app.width<app.height?parent.height:parent.width
         rotation: app.width<app.height?0:-90
     }
+    //Xmc{}
     Shortcut{
         enabled: Qt.platform.os!=='android'
         sequence: 'Esc'

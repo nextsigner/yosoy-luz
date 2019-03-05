@@ -19,11 +19,19 @@ Rectangle {
             onClicked: r.destroy(10)
         }
     }
-    Text{
-        text: 'MI Ciudad'
-        anchors.centerIn: r
-        font.pixelSize: app.fs
-     }
 
+    Column{
+        anchors.centerIn: parent
+        LogoMC{
+            id: logoMC
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+        Text{
+            text: 'MI Ciudad'
+            anchors.centerIn: r
+            font.pixelSize: app.fs
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+    }
 }
 
