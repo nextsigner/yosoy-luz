@@ -28,7 +28,6 @@ Rectangle {
         }
         Text{
             text: 'MI Ciudad'
-            anchors.centerIn: r
             font.pixelSize: app.fs
             anchors.horizontalCenter: parent.horizontalCenter
         }
