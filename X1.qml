@@ -21,7 +21,9 @@ Item {
         width: r.width
         wrapMode: Text.WordWrap
         textFormat: Text.RichText
-        onLinkActivated: {}
+        onLinkActivated: {
+            app.procLink(link)
+        }
     }
 
     Rectangle{

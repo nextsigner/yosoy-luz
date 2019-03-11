@@ -35,6 +35,7 @@ ListView{
         id: lm2
         ListElement{al:0; txt:"¿Para què sirve?"; q:"BotonLista"; idd:"i2"}
         ListElement{al:0; txt:"¿Còmo funciona?"; q:"BotonLista"; idd:"i3"}
+        ListElement{al:0; txt:"¿Que ofrece esta aplicaciòn?"; q:"BotonLista"; idd:"i5"}
         ListElement{al:0; txt:"Màs informaciòn"; q:"BotonLista"; idd:"i4"}
         ListElement{al:0; txt:"Acerca de..."; q:"BotonLista"; idd:"acerca-de"}
     }

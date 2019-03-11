@@ -116,4 +116,8 @@ ApplicationWindow{
         sequence: 'Ctrl+r'
         onActivated: console.log('rr')
     }
+    function procLink(qml){
+        var comp = Qt.createComponent(qml)
+        var obj = comp.createObject(xAppFS, {})
+    }
 }

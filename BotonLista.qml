@@ -49,7 +49,6 @@ Rectangle {
                 }else{
                     contenido.children[0].opacity=0.0
                 }
-                //r.parent.parent.contentY+=300
             }
         }
     }
